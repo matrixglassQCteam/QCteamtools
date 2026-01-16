@@ -1,44 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+  const [diagonal, setDiagonal] = useState(null);
+
+  let calc = () => {
+    function rectangleDiagonal(length, width) {
+      return Math.sqrt(length ** 2 + width ** 2);
+    }
+
+    const result = rectangleDiagonal(parseFloat(width), parseFloat(height));
+    setDiagonal(result);
+  };
+
+  let widthValue = (value) => {
+    setWidth(value.target.value);
+  };
+
+  let heightValue = (value) => {
+    setHeight(value.target.value);
+  };
 
   return (
-
-//     function rectangleDiagonal(length, width) {
-//   return Math.sqrt(length ** 2 + width ** 2);
-// }
-
-// // Example usage:
-// const diagonal = rectangleDiagonal(6, 8);
-// console.log(diagonal); // 10
-
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <input type='number' placeholder='width' onChange={widthValue} />
+        <br />
+        <input type='number' placeholder='height' onChange={heightValue} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+        <p>diagonal</p>
+        <p>{diagonal !== null ? diagonal.toFixed(2) : ""}</p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <button onClick={calc}>calculate</button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
