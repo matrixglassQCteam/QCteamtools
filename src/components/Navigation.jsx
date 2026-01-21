@@ -5,13 +5,13 @@ function Navigation() {
   return (
     <nav className='navbar'>
       <Link to='/dia' className='nav-link'>
-        Diagonal (DIA)
+        Diagonal
       </Link>
       <Link to='/wtp' className='nav-link'>
-        Water Tests (WTP)
+        Water tests
       </Link>
       <Link to='/temp' className='nav-link'>
-        Tempering (TEMP)
+        Temp
       </Link>
     </nav>
   );

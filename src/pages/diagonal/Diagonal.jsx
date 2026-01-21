@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./diaStyle.css"
+import "./diaStyle.css";
 
 function Diagonal() {
   const [width, setWidth] = useState(0);
@@ -26,15 +26,25 @@ function Diagonal() {
   return (
     <section id="dia_container">
       <div>
-        <input className="dia_input" type='number' placeholder='width' onChange={widthValue} />
+        <input
+          className="dia_input"
+          type="number"
+          placeholder="width"
+          onChange={widthValue}
+        />
         <br />
-        <input className="dia_input" type='number' placeholder='height' onChange={heightValue} />
+        <input
+          className="dia_input"
+          type="number"
+          placeholder="height"
+          onChange={heightValue}
+        />
       </div>
       <div className="dia_output">
-        <h2 id='diagonalHeading'>diagonal</h2>
-        <p>{diagonal !== null ? diagonal.toFixed(2) : ""} mm</p>
+        <h2 id="diagonalHeading">diagonal</h2>
+        <p>{diagonal !== null ? Math.floor(diagonal.toFixed(2)) : ""} mm</p>
       </div>
-      <button className='diagonalButton' onClick={calc}>
+      <button className="diagonalButton" onClick={calc}>
         calculate
       </button>
     </section>
