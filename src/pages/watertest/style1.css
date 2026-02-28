@@ -1,0 +1,42 @@
+
+.cutting-style{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.time{
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.time > button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.values > p{
+    padding-top: 10px;
+}
+
+.values > p:last-child {
+    /* background-color: aqua; */
+    padding-bottom: 5px;
+}
+
+.cutting-style > .cutting, .dgu, .lami {
+    background-color: #E9EDDE;
+    border: 2px black solid;
+    margin: 10px;
+    border-radius: 10px;
+}

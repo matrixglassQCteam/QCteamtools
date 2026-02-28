@@ -1,8 +1,10 @@
 .navbar {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  justify-content: space-between;
+  align-items:center;
+  /* background-color: #F5D0C5; */
+  /* gap: 20px; */
+  /* padding: 20px; */
   /* margin-top: auto; */
 }
 

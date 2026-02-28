@@ -1,7 +1,7 @@
 
 
 #dia_container{
-    height: 85vh;
+    /* height: 85vh; */
     /* background-color: green; */
     display: flex;
     flex-direction: column;
@@ -29,4 +29,6 @@
 .diagonalButton{
     padding: 20px 40px;
     font-size: 30px;
-}
+} 
+
+

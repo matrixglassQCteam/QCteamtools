@@ -8,12 +8,14 @@ import Navigation from "./components/Navigation";
 function App() {
   return (
     <div className='app-container'>
-      <Routes>
+      <div className="display-path">
+        <Routes>
         <Route path='/' element={<Diagonal />} />
         <Route path='/dia' element={<Diagonal />} />
         <Route path='/wtp' element={<WaterTest />} />
         <Route path='/temp' element={<Tempering />} />
-      </Routes>
+        </Routes>
+      </div>
       <Navigation />
     </div>
   );
